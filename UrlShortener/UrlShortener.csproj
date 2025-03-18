@@ -35,6 +35,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\UrlShortener.DataAccess\UrlShortener.DataAccess.csproj" />
+    <ProjectReference Include="..\UrlShortener.Models\UrlShortener.Models.csproj" />
+    <ProjectReference Include="..\UrlShortener.Service\UrlShortener.Service.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+﻿@using UrlShortener.Service
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - UrlShortener</title>
     <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/UrlShortener.styles.css" asp-append-version="true" />
 </head>
@@ -21,12 +22,33 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" href="/angular">All urls</a>
                         </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Purchase" asp-action="Index">New url</a>
+                            </li>
+                        }
+                        @if (User.IsInRole(StaticData.RoleAdmin))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Register" asp-action="Index">Add new user</a>
+                            </li>
+                        }
                     </ul>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a class="nav-link text-dark p-3" asp-controller="Register" asp-action="Logout">Logout</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link text-dark p-3" asp-controller="Register" asp-action="Index">Registration</a>
+                        <a class="nav-link text-dark p-3" asp-controller="Login" asp-action="Index">Login</a>
+                    }
                 </div>
             </div>
         </nav>
