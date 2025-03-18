@@ -1,24 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace UrlShortener.DataAccess.Entities
+namespace UrlShortener.Models
 {
-    public class UserEntity
+    public class UserModel
     {
-        [Key]
+        [Required]
         public int Id { get; set; }
 
         [Required]
+        [StringLength(20)]
+        [DisplayName("Login")]
         public string Login { get; set; } = default!;
 
         [Required]
+        [DisplayName("Password")]
         public string Password { get; set; } = default!;
 
+        [Required]
         public string Role { get; set; } = default!;
     }
 }
