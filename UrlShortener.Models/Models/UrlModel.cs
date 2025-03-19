@@ -9,6 +9,9 @@ namespace UrlShortener.Models
         [Required]
         public int Id { get; set; }
 
+        [Required]
+        public int IdOfUser { get; set; }
+
         public UserModel User { get; set; } = default!;
 
         [Required]

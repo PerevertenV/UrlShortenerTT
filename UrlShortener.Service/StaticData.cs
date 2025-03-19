@@ -26,5 +26,12 @@ namespace UrlShortener.Service
             byte[] encrypted = ProtectedData.Protect(bytes, null, DataProtectionScope.CurrentUser);
             return Convert.ToBase64String(encrypted);
         }
+
+        public static string CreateShortUrl()
+        {
+            Random random = new Random();
+            int RandomValue = random.Next(101, 10001);
+            return  ShortUrlTemplate + "\\" +RandomValue.ToString();
+        }
     }
 }

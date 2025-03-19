@@ -30,7 +30,7 @@
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Purchase" asp-action="Index">New url</a>
+                                <a class="nav-link text-dark" asp-controller="Url" asp-action="AddCheckShortUrl">New url</a>
                             </li>
                         }
                         @if (User.IsInRole(StaticData.RoleAdmin))
