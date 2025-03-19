@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" data-critters-container>
+<head>
+  <meta charset="utf-8">
+  <title>All URL's - AngularApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="angular/browser/styles-5INURTSO.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="/Home/Index">UrlShortener</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+          <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/Home/Index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/angular/dashboard">All urls</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="Url/AddCheckShortUrl">New url</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="Register/Index">Add new user</a>
+            </li>
+          </ul>
+          <a class="nav-link text-dark p-3" href="Register/Logout">Logout</a>
+          <a class="nav-link text-dark p-3" href="Register/Index">Registration</a>
+          <a class="nav-link text-dark p-3" href="Login/Index">Login</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <app-root>
+    <app-urls-table></app-urls-table>
+  </app-root>
+  
+
+  <footer class="border-top footer text-muted">
+    <div class="container text-center">
+      <p style="font-family: 'Vivaldi', monospace; font-size: 25px;" class="text-primary">Made by Pereverten</p>
+    </div>
+  </footer>
+
+<script src="angular/browser/polyfills-FFHMD2TL.js" type="module"></script><script src="angular/browser/main-MTWSZVBP.js" type="module"></script></body>
+</html>

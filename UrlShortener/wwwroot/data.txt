@@ -1,0 +1,10 @@
+Url Shortener – is an application for shortening your URLs.
+What you can do:
+
+Authorize and use our service
+Check others' short URLs
+As an authorized user:
+
+Create unique short URLs
+Manage your URLs (Check, Delete)
+And use them as you want!

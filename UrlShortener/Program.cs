@@ -4,6 +4,7 @@ using UrlShortener.DataAccess.Repository.IRepository;
 using UrlShortener.DataAccess.Repository;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using UrlShortener.Service;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,9 +40,13 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "angular")),
+    RequestPath = "/angular"
+});
 
-app.MapFallbackToFile("/angular/{*path:nonfile}", "angular/dist/angular-app/browser/index.html");
+app.MapFallbackToFile("/angular/{*path:nonfile}", "angular/browser/index.html");
 
 app.MapControllerRoute(
     name: "default",

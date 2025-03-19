@@ -7,24 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\angular\dist\angular-app\3rdpartylicenses.txt" />
-    <Content Remove="wwwroot\angular\dist\angular-app\browser\favicon.ico" />
-    <Content Remove="wwwroot\angular\dist\angular-app\browser\index.html" />
-    <Content Remove="wwwroot\angular\dist\angular-app\browser\main-5X4DSXTI.js" />
-    <Content Remove="wwwroot\angular\dist\angular-app\browser\polyfills-FFHMD2TL.js" />
-    <Content Remove="wwwroot\angular\dist\angular-app\browser\styles-5INURTSO.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\angular\dist\angular-app\3rdpartylicenses.txt" />
-    <None Include="wwwroot\angular\dist\angular-app\browser\favicon.ico" />
-    <None Include="wwwroot\angular\dist\angular-app\browser\index.html" />
-    <None Include="wwwroot\angular\dist\angular-app\browser\main-5X4DSXTI.js" />
-    <None Include="wwwroot\angular\dist\angular-app\browser\polyfills-FFHMD2TL.js" />
-    <None Include="wwwroot\angular\dist\angular-app\browser\styles-5INURTSO.css" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.3.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.3">
@@ -37,6 +19,10 @@
     <ProjectReference Include="..\UrlShortener.DataAccess\UrlShortener.DataAccess.csproj" />
     <ProjectReference Include="..\UrlShortener.Models\UrlShortener.Models.csproj" />
     <ProjectReference Include="..\UrlShortener.Service\UrlShortener.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="angular\src\app\components\" />
   </ItemGroup>
 
 </Project>

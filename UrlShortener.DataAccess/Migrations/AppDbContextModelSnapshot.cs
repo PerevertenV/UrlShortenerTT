@@ -48,7 +48,7 @@ namespace UrlShortener.DataAccess.Migrations
 
                     b.HasIndex("IdOfUser");
 
-                    b.ToTable("Urls");
+                    b.ToTable("Urls", (string)null);
                 });
 
             modelBuilder.Entity("UrlShortener.DataAccess.Entities.UserEntity", b =>
@@ -73,7 +73,7 @@ namespace UrlShortener.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
 
                     b.HasData(
                         new
